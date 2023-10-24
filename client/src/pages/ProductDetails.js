@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Layout from "./../components/Layout/Layout";
-import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
-import "../styles/ProductDetailsStyles.css";
+import React, { useState, useEffect } from 'react';
+import Layout from './../components/Layout/Layout';
+import axios from 'axios';
+import { useParams, useNavigate } from 'react-router-dom';
+import '../styles/ProductDetailsStyles.css';
 
 const ProductDetails = () => {
   const params = useParams();
@@ -46,7 +46,7 @@ const ProductDetails = () => {
             className="card-img-top"
             alt={product.name}
             height="300"
-            width={"350px"}
+            width={'350px'}
           />
         </div>
         <div className="col-md-6 product-details-info">
@@ -56,9 +56,9 @@ const ProductDetails = () => {
           <h6>Description : {product.description}</h6>
           <h6>
             Price :
-            {product?.price?.toLocaleString("en-US", {
-              style: "currency",
-              currency: "USD",
+            {product?.price?.toLocaleString('en-US', {
+              style: 'currency',
+              currency: 'USD',
             })}
           </h6>
           <h6>Category : {product?.category?.name}</h6>
@@ -83,9 +83,9 @@ const ProductDetails = () => {
                 <div className="card-name-price">
                   <h5 className="card-title">{p.name}</h5>
                   <h5 className="card-title card-price">
-                    {p.price.toLocaleString("en-US", {
-                      style: "currency",
-                      currency: "USD",
+                    {p.price.toLocaleString('en-US', {
+                      style: 'currency',
+                      currency: 'USD',
                     })}
                   </h5>
                 </div>

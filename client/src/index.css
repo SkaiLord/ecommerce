@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
 
 * {
   margin: 0;
@@ -6,12 +6,23 @@
   box-sizing: border-box;
 }
 
+html {
+  /* hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hide scrollbar for chrome, safari and opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
 /* font-family: 'Poppins', sans-serif; */
 /* font-family: 'Playfair Display', serif; */
 
 /* //navbar css */
 .navbar {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 17px;
   line-height: 26px;
   text-transform: uppercase;
@@ -30,7 +41,7 @@
 
 .navbar-brand {
   font-weight: 700;
-  font-family: "roboto", sans-serif;
+  font-family: 'roboto', sans-serif;
   letter-spacing: 3px;
 }
 
