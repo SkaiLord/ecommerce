@@ -107,7 +107,7 @@ const HomePage = () => {
     }
   };
   return (
-    <Layout title={'ALl Products - Best offers '}>
+    <Layout title={'Raksha | Home'}>
       {/* banner image */}
       <img
         src="/images/banner.avif"
@@ -117,6 +117,7 @@ const HomePage = () => {
       />
       {/* banner image */}
       <div className="container-fluid row mt-3 home-page">
+        {/* Filter column */}
         <div className="col-md-3 filters">
           <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">
@@ -129,7 +130,6 @@ const HomePage = () => {
               </Checkbox>
             ))}
           </div>
-          {/* price filter */}
           <h4 className="text-center mt-4">Filter By Price</h4>
           <div className="d-flex flex-column">
             <Radio.Group onChange={(e) => setRadio(e.target.value)}>
@@ -149,6 +149,7 @@ const HomePage = () => {
             </button>
           </div>
         </div>
+        {/* Product Column */}
         <div className="col-md-9 ">
           <h1 className="text-center">All Products</h1>
           <div className="d-flex flex-wrap">
@@ -218,6 +219,7 @@ const HomePage = () => {
             )}
           </div>
         </div>
+        <div className="p-8"></div>
       </div>
     </Layout>
   );

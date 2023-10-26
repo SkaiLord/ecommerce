@@ -1,11 +1,11 @@
-import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import { useAuth } from "../../context/auth";
-import toast from "react-hot-toast";
-import SearchInput from "../Form/SearchInput";
-import useCategory from "../../hooks/useCategory";
-import { useCart } from "../../context/cart";
-import { Badge } from "antd";
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { useAuth } from '../../context/auth';
+import toast from 'react-hot-toast';
+import SearchInput from '../Form/SearchInput';
+import useCategory from '../../hooks/useCategory';
+import { useCart } from '../../context/cart';
+import { Badge } from 'antd';
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -15,10 +15,10 @@ const Header = () => {
     setAuth({
       ...auth,
       user: null,
-      token: "",
+      token: '',
     });
-    localStorage.removeItem("auth");
-    toast.success("Logout Successfully");
+    localStorage.removeItem('auth');
+    toast.success('Logout Successfully');
   };
   return (
     <>
@@ -37,7 +37,7 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              🛒 Ecommerce App
+              🛒 Raksha
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput />
@@ -49,19 +49,19 @@ const Header = () => {
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
-                  to={"/categories"}
+                  to={'/categories'}
                   data-bs-toggle="dropdown"
                 >
                   Categories
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to={"/categories"}>
+                    <Link className="dropdown-item" to={'/categories'}>
                       All Categories
                     </Link>
                   </li>
-                  {categories?.map((c) => (
-                    <li>
+                  {categories?.map((c, index) => (
+                    <li key={index}>
                       <Link
                         className="dropdown-item"
                         to={`/category/${c.slug}`}
@@ -94,7 +94,7 @@ const Header = () => {
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
-                      style={{ border: "none" }}
+                      style={{ border: 'none' }}
                     >
                       {auth?.user?.name}
                     </NavLink>
@@ -102,7 +102,7 @@ const Header = () => {
                       <li>
                         <NavLink
                           to={`/dashboard/${
-                            auth?.user?.role === 1 ? "admin" : "user"
+                            auth?.user?.role === 1 ? 'admin' : 'user'
                           }`}
                           className="dropdown-item"
                         >
